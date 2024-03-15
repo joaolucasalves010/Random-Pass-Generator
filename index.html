@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/key_13896642.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/js/script.js" defer></script>
+  </head>
+  <body class="">
+    <div id="switch-container">
+      <button onclick="toggleMode()"></button>
+    </div>
+    <div id="container">
+      <h2>Generate password</h2>
+      <div id="input-container">
+        <label for="inputValue">Digite o tamanho da sua senha:</label>
+        <input
+          id="inputValue"
+          type="text"
+          placeholder="Minimo 8, Maximo 16..."
+          maxlength="2"
+        />
+      </div>
+      <div id="erro" class="hide">
+        <span></span>
+      </div>
+      <div id="btn-container">
+        <button id="generate-pass">Gerar senha</button>
+        <button id="clear-pass">Limpar</button>
+      </div>
+    </div>
+    <div id="password-container" class="hide">
+      <p>
+        <ion-icon name="key-outline" id="key"></ion-icon> Senha Gerada :
+        <span></span>
+      </p>
+      <button>Copiar</button>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
