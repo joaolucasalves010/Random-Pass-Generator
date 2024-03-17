@@ -26,8 +26,12 @@ function toggleMode() {
 
 // Eventos
 buttonGenerate.addEventListener("click", () => {
-  const numberValue = +inputNumberValue.value
-  if (!inputNumberValue.value) {
+  const numberValue = inputNumberValue.value
+  if (isNaN(inputNumberValue.value)) {
+    divErro.classList.remove("hide")
+    mensagemErro.classList.add("error")
+    mensagemErro.innerText = "Digite apenas numeros!"
+  } else if (!inputNumberValue.value) {
     divErro.classList.remove("hide")
     mensagemErro.classList.add("error")
     mensagemErro.innerText = "Digite o número acima!"
